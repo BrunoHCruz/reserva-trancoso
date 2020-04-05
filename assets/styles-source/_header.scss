@@ -1,0 +1,184 @@
+
+
+.header {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    background-color: transparent;
+    @include mobile {
+        padding-top: 30px;
+    }
+    &__logo {
+        @include mobile {
+            width: 50%;
+        }
+        &--image {
+            @include mobile {
+                width: 85%;
+            }
+        }
+    }
+
+    &__btn-menu{
+        margin: 0 30px;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: all .3s;
+        letter-spacing: 1.4px;
+        @include font-std(13px, $colorWhite, 400, $fontSecond);
+        @include mobile {
+            margin: 0 18px;
+        }
+        &:hover{
+            border-bottom: 2px solid $colorWhite;    
+        }
+
+        &.open, &.menu-fixo {
+            color: $colorBrownLight;
+            &:hover{
+                border-bottom: 2px solid $colorBrownLight;    
+            }
+        }
+    }
+
+    &__lang {
+        margin: 0 30px;
+        visibility: hidden; 
+        @include mobile {
+            margin: 0;
+        }
+        &--link {
+            @include font-std(13px, transparent, 400, $fontSecond);
+            letter-spacing: 1.4px;
+            transition: all .3s;
+            &:hover{
+                border-bottom: 2px solid $colorWhite;    
+            }
+
+            &.open, &.menu-fixo {
+                color: $colorBrownLight;
+                &:hover{
+                    border-bottom: 2px solid $colorBrownLight;    
+                }
+            }
+        }
+        &--icon {
+            margin:0 5px;
+            color: $colorWhite;
+            &.open, &.menu-fixo {
+                color: $colorBrownLight;
+            }
+        }
+    }
+
+    &__menu {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(246, 244, 240, 0.95);
+
+        &--container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            @include mobile {
+                align-items: baseline;
+            } 
+        }
+
+        &--ul {
+            display: flex;
+            background: #f5f4f0;
+            width: 100%;   
+            @include mobile {
+                flex-direction: column;
+                padding-top: 78px !important; 
+                height: 100%;
+                text-align: center;
+            }                
+        }
+
+        &--column {
+            width: 33%;
+            padding: 25px 60px;
+            &.middle {
+                border-left: 1px solid #bcbbae;
+                border-right: 1px solid #bcbbae;
+                @include mobile {
+                    border: none;
+                    border-top: 1px solid #bcbbae;
+                    border-bottom: 1px solid #bcbbae;
+                }
+            }
+            @include mobile {
+                width: 100%;
+                padding: 25px 30px
+                
+            }
+        }
+
+        &--title {
+            @include font-std(26px, $colorBrownLight, 400, $fontThird);
+            margin-bottom: 30px;
+            display: block;
+            &.blog {
+                margin-top: 26px;
+            }
+            @include mobile {
+                margin-bottom: 0;
+            }
+        }
+
+        &--link {
+            @include font-std(14px, $colorBrown, 400, $fontPrimary);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            display: block;
+            letter-spacing: 1px;
+        }
+
+        &--redes-sociais {
+            position: absolute;
+            bottom: 50px;
+            display: block;
+            width: 100%;
+            text-align: center;
+            right: 0;
+            .icon {
+                font-size: 22px;
+                color: $colorBrown;
+                margin: 0 7px;
+            }
+        }
+    }
+
+    &.fixo {
+        display: none;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: rgba(246, 244, 240, 0.95);
+        padding-top: 0;
+        padding-bottom: 5px;
+        @include mobile {
+            display: none !important;
+        }
+        .header__logo--image {
+            display: block;
+            width: 180px;
+            transform: translateY(-10px);
+            @include mobile {
+                width: 85%;
+            }
+        }
+
+    }
+
+}

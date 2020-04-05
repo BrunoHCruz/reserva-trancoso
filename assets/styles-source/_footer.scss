@@ -1,0 +1,234 @@
+
+.footer {
+    height: auto;
+    padding: 50px;
+    background-color: $colorBrown;
+
+    &__container {
+        display: flex;
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+
+    &__left {
+        float: left;
+        width: 60%;
+        @include mobile {
+            width: 100%;
+            text-align: center;
+        }
+        &--top {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            @include mobile {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        &--bottom {
+            padding-top: 65px;
+        }
+    }
+
+    &__right {
+        padding-left: 25px;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        max-width: 487px;
+        margin: 0 auto;
+        @include mobile {
+            width: 100%;
+            text-align: center;
+            padding-left: 0;
+        }
+        &--title {
+            padding-bottom: 20px;
+
+            p {
+                @include font-std(11px, $colorWhite, 300, $fontPrimary);
+                text-transform: uppercase;
+                font-weight: bold;
+                letter-spacing: 1.5px;
+            }
+        }
+
+        &--email {
+            float: left;
+            width: 50%;
+            min-width: 248px;
+            input {
+                letter-spacing: 1px;
+                border: 3px solid;
+                padding: 3px 2px 3px 47px;
+                background: transparent;
+                outline: 0;
+                color: $colorWhite;
+    
+                &::placeholder{
+                    @include font-std(12px, $colorWhite, 300, $fontPrimary);
+                }
+            }
+        }
+
+        &--confirmar {
+            float: right;
+            margin-bottom: 45px;
+            input {
+                @include font-std(12px, $colorWhite, 300, $fontPrimary);
+                cursor: pointer;
+                border: 3px solid;
+                padding: 5px 5px 5px 5px;
+                background: transparent;
+                outline: none;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+        }
+
+        &--redes-sociais {
+            padding: 5px 0 23px;
+            text-align: right;
+            font-size: 16px;
+            @include mobile {
+                padding: 95px 0;
+                text-align: center;
+            }
+            .icon {
+                color: $colorWhite;
+                margin-left: 15px;
+                padding-bottom: 3px;
+                transition: all .5s;
+                border-bottom: 2px solid transparent !important;
+                &:hover {
+                    border-bottom: 2px solid $colorWhite !important;
+                }
+                @include mobile {
+                    font-size: 26px;
+                }
+            }
+        }
+
+        &--terms {
+            text-align: right;
+            @include mobile {
+                text-align: center;
+            }
+            p {
+                text-transform: none;
+                @include font-std(12px, $colorWhite, 300, $fontPrimary);
+            }
+
+            .termos {
+                @include font-std(12px, $colorWhite, 300, $fontPrimary);
+                padding-right: 0;
+                display: block;
+                margin-bottom: 23px;
+                color: $colorWhite;
+                text-decoration: underline;
+            }
+
+            .logo-smart {
+                width: 39px;
+                height: 10px;
+                float: right;
+                display: block;
+                margin-top: 15px;
+                @include mobile {
+                    float: none;
+                    display: block;
+                    margin: 20px auto 0;
+                }
+            }
+        }
+
+        .hide-mobile {
+            @include mobile {
+                display: none;
+            }
+        }
+
+        .hide-desktop {
+            @include desktop {
+                display: none;
+            }
+        }
+
+    }
+
+    &__li {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    &__ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__link {
+        @include font-std(12px, $colorWhite, 300, $fontPrimary);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-bottom: 2px solid transparent;
+        transition: all .5s;
+        &:hover {
+            border-bottom: 2px solid #fff;
+        }
+    }
+
+    &__logo {
+        display: inline-block;
+        padding-right: 30px;
+        margin-top: 20px;
+        @include mobile {
+            display: block;
+            width: 100%;
+            padding-right: 0;
+        }
+        p {
+            @include font-std(11px, $colorWhite, 300, $fontPrimary);
+            text-transform: uppercase;
+            padding-top: 20px;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .logo-footer {
+            @include mobile {
+                max-width: 100%;
+            }
+        }
+    }
+
+        
+    &__nav{
+        @include mobile {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__form {
+
+        &--mobile {
+            .footer__right--email {
+                padding: 40px 0;
+                margin: 0 auto;
+                float: none;
+            }
+            .footer__right--confirmar {
+                float: none;
+            }
+        }
+
+        &--title {
+            @include font-std(11px, $colorWhite, bold, $fontPrimary);
+            line-height: 18px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+    }
+}
