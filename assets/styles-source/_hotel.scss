@@ -1,0 +1,346 @@
+.hotel {
+    background: $bgPrimary;
+    padding: 50px 0;
+    margin: 480px 0 0 0; 
+
+
+    &__textMid { 
+        width: 443px;
+        margin: 0 0 0 118px;
+        @include mobile {
+            margin: 230px 0 0;
+            width: 100%;
+        }
+
+        &--text {
+            @include font-std(15px, $colorBrown, 300, $fontSecond);
+            line-height: 30px;
+
+            span {
+                font-weight: 600;
+            }
+        }
+    }
+
+    &__textMidRight { 
+        width: 400px; 
+        margin: 80px 0 -180px 50px;
+        @include mobile {
+            margin: 20px 0;
+            width: 100%;
+        }
+
+        &--text {
+            @include font-std(15px, $colorBrown, 300, $fontSecond);  
+            line-height: 30px;
+
+            span {
+                font-weight: 600;
+            }
+        }
+    }
+
+    &__video {
+        max-width: 536px;
+        margin: 30px 0 50px 50px;
+
+        @include mobile {
+            max-width: 100%;
+            margin: 20px 0;
+        }
+
+        video {
+            max-width: 100%;
+        }
+    }
+
+    &__title {
+        @include font-std(48px, $colorBrownLight, 300, $fontThird); 
+        line-height: 50px;
+        text-align: center;
+        margin: 20px 0 40px;
+    }
+
+    &__primarySlide {
+        padding: 15px 0 40px;
+        .flex {
+            display: flex !important;
+            @include mobile {
+                display: block !important;
+            }
+        }
+
+        .arrow-prev {
+            position: absolute;
+            top: 45%;
+            left: 15px;
+            z-index: 99;
+            &:before {
+                color: $colorWhite;
+                opacity: 0.9;
+                font-size: 35px;
+                cursor: pointer;
+            }
+            @include mobile {
+                top: 25%;
+            }
+        }
+         
+        .arrow-next {
+            position: absolute;
+            top: 45%;
+            right: 335px;
+            z-index: 99;
+            &:before {
+                color: $colorWhite;
+                opacity: 0.9;
+                font-size: 35px;
+                cursor: pointer;
+                -ms-transform: rotate(180deg);
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+            @include mobile {
+                top: 25%;
+                right: 15px;
+            }
+        }
+
+        .slick-dots {
+            max-width: 100px;
+            bottom: inherit;
+            top: 0;
+            right: 210px;
+
+            @include mobile {
+                max-width: 100%; 
+                bottom: -20px;
+                top: inherit;
+                right: 0;
+            }
+
+            li {
+                width: 10px;
+            }
+
+            button {
+                &:before {
+                    font-size: 40px;
+                    color: $colorBrownLight;
+                }
+            }
+
+            .slick-active {
+               button {
+                &:before {
+                    color: $colorBrownLight;
+                }
+               }
+            }
+
+        }
+
+        &--img {
+            width: 70%;
+            @include mobile {
+                padding: 20px 0;
+                width: 100%;
+            }
+        }
+        &--text {
+            width: 30%;
+            padding: 0 0px 20px 30px;
+            @include mobile {
+                padding: 20px 0;
+                width: 100%;
+            }
+            p { 
+                @include font-std(20px, $colorBrownLight, 500, $fontSecond);  
+                position: absolute;
+                bottom: 0;
+                @include mobile {
+                    position: relative;
+                }
+                span {
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+
+    &__secondarySlide {
+
+        padding: 15px 0;
+
+        &--img {
+
+        }
+
+        &--text { 
+            padding: 20px 0;
+             
+            p { 
+                @include font-std(20px, $colorBrownLight, 500, $fontSecond);  
+                  
+                span {
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .arrow-prev {
+            position: absolute;
+            top: 38%;
+            left: 25px;
+            z-index: 99;
+            &:before {
+                color: $colorWhite;
+                opacity: 0.9;
+                font-size: 35px;
+                cursor: pointer;
+            }
+            @include mobile {
+                top: 25%;
+            }
+        }
+         
+        .arrow-next {
+            position: absolute;
+            top: 38%;
+            right: 95px;
+            z-index: 99;
+            &:before {
+                color: $colorWhite;
+                opacity: 0.9;
+                font-size: 35px;
+                cursor: pointer;
+                -ms-transform: rotate(180deg);
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+            @include mobile {
+                top: 25%;
+                right: 15px;
+            }
+        }
+
+        .slick-dots { 
+
+            max-width: 200px;
+            right: 5px;
+            bottom: 60px;
+
+
+            @include mobile {
+                max-width: 100%;
+                bottom: 0;
+            }
+ 
+            li {
+                width: 10px;
+            }
+
+            button {
+                &:before {
+                    font-size: 40px;
+                    color: $colorBrownLight;
+                }
+            }
+
+            .slick-active {
+               button {
+                &:before {
+                    color: $colorBrownLight;
+                }
+               }
+            }
+
+        }
+
+    }
+
+    &__thirdSlide { 
+        padding: 15px 0;
+        max-width: 784px;
+        display: block;
+        margin: 0 auto;
+
+        &--img {
+
+        } 
+
+        .arrow-prev {
+            position: absolute;
+            top: 45%;
+            left: 25px;
+            z-index: 99;
+            &:before {
+                color: $colorWhite;
+                opacity: 0.9;
+                font-size: 35px;
+                cursor: pointer;
+            }
+            @include mobile {
+                top: 25%;
+            }
+        }
+         
+        .arrow-next {
+            position: absolute;
+            top: 45%;
+            right: 25px;
+            z-index: 99;
+            &:before {
+                color: $colorWhite;
+                opacity: 0.9;
+                font-size: 35px;
+                cursor: pointer;
+                -ms-transform: rotate(180deg);
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+            @include mobile {
+                top: 25%;
+                right: 15px;
+            }
+        }
+
+        .slick-dots { 
+
+            max-width: 100%; 
+            bottom: -30px;
+
+
+            @include mobile {
+                max-width: 100%;
+                bottom: 0;
+            }
+ 
+            li {
+                width: 10px;
+            }
+
+            button {
+                &:before {
+                    font-size: 40px;
+                    color: $colorBrownLight;
+                }
+            }
+
+            .slick-active {
+               button {
+                &:before {
+                    color: $colorBrownLight;
+                }
+               }
+            }
+
+        }
+
+    }
+
+}
+

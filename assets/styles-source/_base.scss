@@ -18,6 +18,10 @@
     font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -97,6 +101,33 @@ html {
 body {
   overflow-x: hidden;
   background-color: #f6f4f0;
+}
+
+.container { 
+  max-width: 1332px;
+  width: 100%;
+  margin: 0 auto;
+
+  @include notebook {
+    max-width: 1020px;
+  }
+
+  @include mobile {
+    max-width: 768px;
+    padding: 0 15px;
+  }
+
+}
+
+.flex {
+  display: flex;
+  @include mobile {
+    display: block;
+  }
+}
+
+.img-fluid {
+  max-width: 100%;
 }
 
 .hide-mobile {

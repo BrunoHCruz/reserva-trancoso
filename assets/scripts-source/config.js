@@ -106,4 +106,81 @@ $( document ).ready(function() {
 	//FIM INSTAGRAM
 
 
+	// SLICKS HOTEL
+
+	$('.hotel__primarySlide').slick({
+	  dots: true,
+	  arrow: true,
+	  prevArrow: "<i class='arrow-prev icon-arrow'></i>",
+      nextArrow: "<i class='arrow-next icon-arrow'></i>",
+	  infinite: true,
+	  speed: 500,
+	  fade: true,
+	  cssEase: 'linear'
+	});
+
+	$('.hotel__secondarySlide').slick({
+	  dots: true,
+	  arrow: true,
+	  prevArrow: "<i class='arrow-prev icon-arrow'></i>",
+      nextArrow: "<i class='arrow-next icon-arrow'></i>",
+	  infinite: true,
+	  speed: 500,
+	  fade: true,
+	  cssEase: 'linear'
+	});
+
+	$('.hotel__thirdSlide').slick({
+	  dots: true,
+	  arrow: true,
+	  prevArrow: "<i class='arrow-prev icon-arrow'></i>",
+      nextArrow: "<i class='arrow-next icon-arrow'></i>",
+	  infinite: true,
+	  speed: 500,
+	  fade: true,
+	  cssEase: 'linear'
+	});
+
+	// END SLICK HOTEL
+
+
+	// SLICK ESTANCIA
+	$('.estancias__primarySlide').slick({
+	  dots: true,
+	  arrow: true,
+	  prevArrow: "<i class='arrow-prev icon-arrow'></i>",
+      nextArrow: "<i class='arrow-next icon-arrow'></i>",
+	  infinite: true,
+	  speed: 500,
+	  fade: true,
+	  cssEase: 'linear'
+	});
+
+	$('.estancias__secondarySlide').slick({
+	  dots: true,
+	  arrow: true,
+	  prevArrow: "<i class='arrow-prev icon-arrow'></i>",
+      nextArrow: "<i class='arrow-next icon-arrow'></i>",
+	  infinite: true,
+	  speed: 500,
+	  fade: true,
+	  cssEase: 'linear'
+	});
+ 
+	// END SLICK ESTANCIA
+
+
+	// SCROLL ARROW DOWN SECTION
+	$(".webdoor__scroll").on('click', function(e) {
+		e.preventDefault();
+		var scroll = $(".container:eq(0)").offset().top;
+      	$("HTML, BODY").animate(
+	        {
+	          scrollTop: scroll - 200
+	        },
+	        100
+        );
+	});
+
+
 });
