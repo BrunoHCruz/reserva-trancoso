@@ -3,6 +3,7 @@
    $title       = ((isset($title) && !empty($title)) ? $title : '');
    $description = ((isset($description) && !empty($description)) ? $description : '');
    $keywords    = ((isset($keywords) && !empty($keywords)) ? $keywords : '');
+   $local    = ((isset($local) && !empty($local)) ? $local : '');
 
 ?>
 <!DOCTYPE html>
@@ -67,6 +68,8 @@
   </head>
   <body>
 
+    <?php if($local == 'home') :?>
+    <!-- Home Page -->
   <header class="header">
     <div class="header__btn-menu default">
       <span>MENU</span>
@@ -84,6 +87,27 @@
       <a class="header__lang--link" href="#">EN</a>
     </div>
   </header>
+  <!-- End -->
+  <?php else :?>
+  <header class="header header-institucional">
+    <div class="header__btn-menu default">
+      <span>MENU</span>
+    </div>
+    <div class="header__logo">
+      <a href="#">
+        <h1>
+            <img class="header__logo--image logo-institucional" src="assets/images/logo-fasano-header-color.svg" alt="Fasano Trancoso">
+        </h1>
+      </a>
+    </div>
+    <div class="header__lang">
+      <a class="header__lang--link" href="#">PT</a>
+      <span class="header__lang--icon">|</span>
+      <a class="header__lang--link" href="#">EN</a>
+    </div>
+  </header>
+  <?php endif;?>
+  
 
   <div class="header fixo">
     <div class="header__btn-menu menu-fixo">

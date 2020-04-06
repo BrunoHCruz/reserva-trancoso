@@ -1,0 +1,253 @@
+
+.webdoor-relative {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    margin: 0 0 145px 0;
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    @include mobile {
+        height: 408px;
+    }
+}
+
+.webdoor {
+    &__fasano {
+        background-image: url("/assets/images/destaque-institucional.jpg");
+    }
+}
+
+.header-institucional {
+    background: rgba(246, 244, 240, 0.95);
+    padding: 22px 0;
+    .header__btn-menu {
+        color: $colorBrownLight;
+        &:hover{
+            border-bottom: 2px solid $colorBrownLight;    
+        }
+    }
+}
+
+.institucional {
+    &__fasano {
+        &--area-slick {
+            padding: 32px 0 180px;
+            width: 100%;
+            
+            .holder-content {
+                width: 1020px;
+                margin: 0 auto;
+            }
+            
+            .areas-textos__title {
+                width: 749px;
+                margin: 40px auto 59px;
+                text-align: center;
+                @include mobile {
+                    width: 100%;
+                    margin: 40px auto 59px;
+                }
+            }
+
+            .text-secao {
+                width: 805px;
+                text-align: center;
+                font-weight: 300;
+                line-height: 30px;
+                font-size: 15px;
+                font-family: 'Open Sans', sans-serif;
+                color: #858177;
+                margin: 0 auto;
+                margin-bottom: 49px;
+                @include mobile {
+                    width: 283px;
+                    margin: 0 auto;
+                    margin-bottom: 49px;
+                }
+            }
+
+            .galeria02 {
+                margin: 38px 35px 0 36px;
+                width: 539px;
+                height: 360px;
+                padding: 0;
+                @include mobile {
+                    margin: 38px 35px 0 36px;
+                    width: 100%;
+                }
+            }
+
+            .hotel_slider_area02_wrapper {
+                width: 539px;
+                position: relative;
+                left: 0px;
+                top: 0px;
+                z-index: 999;
+                opacity: 1;
+            }
+
+            .hotel_area02_galeria_images {
+                width: 539px;
+                height: 360px;
+                @include mobile {
+                    width: 284px;
+                    height: 192px;
+                    margin: 0 auto;
+                }
+            }
+
+            .bg-img {
+                background-position: center;
+                background-size: cover;
+            }
+
+            .slick-prev {
+                z-index: 999999;
+                left: 25px;
+                &:before {
+                    content: url("/assets/images/alb.png");
+                    color: #8f7d57;
+                    font-size: 45px;
+                }
+            }
+
+            .slick-next {
+                z-index: 999999;
+                right: 25px;
+                &:before {
+                    content: url("/assets/images/arb.png");
+                    color: #8f7d57;
+                    font-size: 45px;
+                }
+            }
+
+            .slick-list {
+                overflow: visible;
+            }
+
+            .slick-dots {
+                left: 20%;
+                position: absolute;
+                text-align: right;
+                top: 5%;
+                li {
+                    margin: 0;
+                }
+            }
+
+            .slick-dots li button:before {
+                font-size: 44px !important;
+                color: #8f7d57 !important;
+            }
+
+            .titulo-legenda-wrapper {
+                width: 371px;
+                left: 573px;
+                position: absolute;
+                bottom: 0;
+                float: right;
+
+                p {
+                    line-height: 30px;
+                    font-weight: 300;
+                    font-size: 15px;
+                    line-height: 30px;
+                    color: #858177;
+                }
+
+                h3 {
+                    font-weight: 400;
+                }
+            }
+
+            .logo-bahia {
+                display: block;
+                margin: 10px auto 40px;
+            }
+        }
+        
+        &--webdoor {
+            margin: 0 0 45px 0;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &--logos {
+            text-align: center;
+            padding: 80px 0 163px;
+            img {
+                display: block;
+                margin: 5px auto 75px;
+            }
+            p {
+                color: #8f7d57;
+                font-size: 11px;
+                font-family: $fontPrimary;
+                letter-spacing: 1.7px;
+                line-height: 14px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+.form-reserva {
+    &--content {
+        width: 1020px;
+        margin: 0 auto;
+        text-align: center;
+        h2 {
+            font-weight: 400;
+        }
+        p {
+            line-height: 2.5;
+        }
+        a {
+            margin-bottom: 25px;
+            text-decoration: underline;
+            display: block;
+            color: $colorBrownLight
+        }
+    }
+    .areas-textos {
+        &__form {
+            margin: 0 auto;
+            width: 424px;
+            label {
+                padding-top: 43px;
+            }
+        }
+    }
+}
+
+.chat {
+    padding: 50px 0;
+    text-align: center;
+    p {
+        padding: 10px;
+    }
+    .areas-textos__link {
+        width: 20%;
+    }
+}
+
+.bahia-beach {
+    .galeria02 {
+        left: 40%;
+    }
+    .titulo-legenda-wrapper {
+        text-align: right;
+        left: -409px;
+    }
+    .hotel_slider_area02_wrapper {
+        width: 100%;
+        display: inline-block;
+    }
+    .slick-dots {
+        left: -17%;
+        text-align: left;
+    }
+}
