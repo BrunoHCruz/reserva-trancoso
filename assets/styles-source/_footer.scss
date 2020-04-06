@@ -6,8 +6,10 @@
 
     &__container {
         display: flex;
+        justify-content: space-between;
         @include mobile {
             flex-direction: column;
+            justify-content: unset;
         }
     }
 
@@ -38,7 +40,6 @@
         flex-direction: column;
         width: 40%;
         max-width: 487px;
-        margin: 0 auto;
         @include mobile {
             width: 100%;
             text-align: center;

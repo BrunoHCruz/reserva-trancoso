@@ -16,6 +16,7 @@ $( document ).ready(function() {
 			$(this).find('span').text('MENU');
 			$('.header__logo--image').attr('src','assets/images/logo-fasano-header.svg');
 			$('.header__logo--image.menu-fixo').attr('src','assets/images/logo-fasano-header-color.svg');
+			$('.header__logo--image.logo-institucional').attr('src','assets/images/logo-fasano-header-color.svg');
 			$('body').css('overflow-y', 'unset', 'overflow-x', 'hidden');
 			$('.header__menu').css('display', 'none');
 		}else{
@@ -104,6 +105,42 @@ $( document ).ready(function() {
 	// });
 
 	//FIM INSTAGRAM
+
+	//SLICKS 
+
+	$('.hotel_area02_galeria').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: false,
+		autoplaySpeed: 3000,
+		infinite: true,
+		arrows: true,
+		dots: true,
+		adaptiveHeight: false,
+		fade: true,
+		responsive: [
+			{
+				breakpoint: 960,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					autoplay: false,
+					arrows: false,
+					autoplaySpeed: 3000,
+					infinite: true,
+					dots: true,
+					adaptiveHeight: false,
+					fade: true,
+				}
+			}	
+		]
+	});
+
+	$('.slick-slide').each(function(index) {
+	var bg = $(this).find('.bg-img').css('background-image');
+		bg = bg.replace('url(','').replace(')','').replace(/\"/gi, "");
+	$(this).find('.bg-img').wrap('<a href="'+bg+'" data-rel="lightbox"></a>');
+	});
 
 
 });

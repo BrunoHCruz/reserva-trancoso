@@ -3,6 +3,7 @@
     $title       = 'Fasano Trancoso: tão exclusivo quanto o lugar onde nasceu';
     $description = 'Sol, mar, amigos, eventos inesquecíveis, momentos especiais. O Fasano Trancoso Villas, Estâncias &#038; Hotel é um lugar para viver tudo o que o inspira e o faz feliz';
     $keywords    = '';
+    $local = 'home';
     
     include('header.php');
 
