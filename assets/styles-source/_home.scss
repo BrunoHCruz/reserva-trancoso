@@ -12,8 +12,30 @@
     &__home {
         background-image: url("/assets/images/webdoor-home.jpg");
     }
+
+    &__title {
+        @include font-std(36px, $colorWhite, 400, $fontThird);
+        text-align: center;
+        @include mobile {
+            font-size: 32px; 
+        }
+    }
+
+    &__scroll {
+        position: absolute;
+        z-index: 99;
+        margin-top: 10px;
+        margin-left: -10px;
+    }
     
 }
+
+.webdoor-hotel__container {
+    display: block;
+    text-align: center;
+}
+
+
 
 .webdoor-home {
     top: 0;
@@ -127,7 +149,8 @@
             transition: all .4s;
             display: block;
         }
-    }
+    } 
+
 
     &__video {
         position: absolute;
